@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>Components React!</title>
+    <script src="https://unpkg.com/react@16/umd/react.
+development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.
+development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/
+babel.min.js"></script>
+
+
+    <style>
+        .letter {
+             padding: 10px;
+             margin: 10px;
+             background-color: #FFDE00;
+             color: #333;
+             display: inline-block;
+             font-family: monospace;
+             font-size: 32px;
+             text-align: center;
+        }
+    </style>
+
 </head>
+
 <body>
-    <p>Привет</p>
-</body>
-</html>
+    <div id="container"></div>
+
+    <script type="text/babel">
+        var destination = document.querySelector("#container");
+
+        class Letter extends React.Component {
+            render() {
+                return (
+                    <div className="letter">
+                        
+                            {this.props.children}
+                        
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(
+        
+                <div>
+                 <Letter>G</Letter>
+                 <Letter>U</Letter>
+                 <Letter>J</Letter>
+                 <Letter>?</Letter>
+                 <Letter>X</Letter>
+                </div>,
+            destination
+        );
+    </script>
+</body></html> 
