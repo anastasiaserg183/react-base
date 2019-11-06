@@ -31,7 +31,7 @@ babel.min.js"></script>
         render() {
             var squareStyle = {
                 height: 150,
-                backgroundColor: "#FF6663"
+                backgroundColor: this.props.color
             };
             return (
                 <div style={squareStyle}>
@@ -50,7 +50,7 @@ babel.min.js"></script>
                 margin: 0,
             };
             return (
-                <p style={labelStyle}>#FF6663</p>
+                <p style={labelStyle}>{this.props.color}</p>
             );
         }
     }
@@ -66,8 +66,8 @@ babel.min.js"></script>
                 };
             return (
                 <div style={cardStyle}>
-                <Square />
-                <Label />
+                <Square color={this.props.color} />
+                <Label color={this.props.color} />
                 </div>
             );
         }
@@ -77,7 +77,8 @@ babel.min.js"></script>
     ReactDOM.render(
         
                 <div>
-                     <Card/>
+                     <Card color="#FF6663"/>
+                     <Card color="#000"/>
                 </div>,
             document.querySelector("#container")
         );
