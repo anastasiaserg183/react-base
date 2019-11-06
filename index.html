@@ -28,7 +28,7 @@ babel.min.js"></script>
                  var letterStyle = {
                  padding: 10,
                  margin: 10,
-                 backgroundColor: "#FFDE00",
+                 backgroundColor: this.props.bgcolor,
                  color: "#333",
                  display: "inline-block",
                  fontFamily: "monospace",
@@ -48,11 +48,11 @@ babel.min.js"></script>
         ReactDOM.render(
         
                 <div>
-                 <Letter>G</Letter>
-                 <Letter>U</Letter>
-                 <Letter>J</Letter>
-                 <Letter>?</Letter>
-                 <Letter>X</Letter>
+                 <Letter bgcolor="#58B3FF">G</Letter>
+                 <Letter bgcolor="#FF605F">U</Letter>
+                 <Letter bgcolor="#FFD52E">J</Letter>
+                 <Letter bgcolor="#49DD8E">?</Letter>
+                 <Letter bgcolor="#AE99FF">X</Letter>
                 </div>,
             destination
         );
